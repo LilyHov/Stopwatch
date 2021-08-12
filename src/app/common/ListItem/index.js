@@ -3,22 +3,23 @@ import './list.css'
 
 const ListItem = ({paused, maxValue, minValue, action, time, label, key }) => {
     let classNames = 'list-item-wrapp';
+    let timeClasses;
     if (paused) {
         classNames += ' paused';
     }
 
     if (maxValue) {
-        classNames += ' maxValue';
+        timeClasses += ' maxValue';
     }
 
     if (minValue) {
-        classNames += ' minValue';
+        timeClasses += ' minValue';
     }
 
     return (
         <div className={classNames} onClick={action} key={key}>
             <span>{label && (label)} </span>
-            <span> {time} {paused && (' zzzz')}</span>
+            <span className={timeClasses}> {time} {paused && (' zzzz')}</span>
         </div>
     )
 }
