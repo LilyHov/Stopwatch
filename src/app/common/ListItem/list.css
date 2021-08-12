@@ -1,0 +1,22 @@
+.list-item-wrapp {
+    width: 100%;
+    border-bottom: 1px solid #dddddd;
+    color: white;
+    margin: 10px;
+    display: grid;
+    grid-template-columns: auto auto;
+    padding: 10px;
+    cursor: pointer;
+}
+
+.paused {
+    color: #7c7c7c;
+}
+
+.maxValue {
+    color: green;
+}
+
+.minValue {
+    color: red;
+}

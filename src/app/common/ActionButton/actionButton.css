@@ -1,0 +1,41 @@
+.button-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 1.5rem;
+}
+.button {
+    display:block;
+    height: 4.5rem;
+    width: 4.5rem;
+    border-radius: 50%;
+    border: none;
+    background-color: gray;
+    color: white;
+    font-size: 1rem;
+}
+.paused-btn {
+    background-color: red;
+}
+
+.paused-btn:before {
+    border: 0.15rem solid darkred !important;
+    color: red;
+}
+
+.button:before {
+    content: " ";
+    display:block;
+    position: absolute;
+    width: 4.9rem;
+    height: 4.9rem;
+    border: 0.15rem solid gray;
+    border-radius: 50%;
+    margin-top: -2.03rem;
+    margin-left: -0.7rem;
+}
+
+.button:hover {
+    filter: brightness(0.85);
+}
+

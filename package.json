@@ -22,5 +22,8 @@
   },
   "devDependencies": {
     "razzle": "3.0.0"
+  },
+  "browser": {
+    "fs": false
   }
 }
