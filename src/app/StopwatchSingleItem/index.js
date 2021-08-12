@@ -1,18 +1,22 @@
 import React, {useState, useEffect} from 'react'
-import moment from 'moment'
 import ListItem from "../common/ListItem";
 import ActionButton from "../common/ActionButton";
 
 const Timer = ({interval}) => {
-    const pad = (n) => n < 10 ? '0' + n : n
-    const duration = moment.duration(interval)
-    const milliseconds = Math.floor(duration.milliseconds() / 10)
     return (
         <div className={'timer'}>
-            <span>{pad(duration.hours())}:</span>
-            <span>{pad(duration.minutes())}:</span>
-            <span>{pad(duration.seconds())},</span>
-            <span>{pad(milliseconds)}</span>
+            <span className="digits">
+        {("0" + Math.floor((interval / 3600000) % 60)).slice(-2)}:
+      </span>
+              <span className="digits">
+        {("0" + Math.floor((interval / 60000) % 60)).slice(-2)}:
+      </span>
+            <span className="digits">
+        {("0" + Math.floor((interval / 1000) % 60)).slice(-2)}.
+      </span>
+            <span className="digits mili-sec">
+        {("0" + ((interval / 10) % 100)).slice(-3)}
+      </span>
         </div>
     )
 }
@@ -92,7 +96,15 @@ const StopwatchSingleItem = () => {
         }, 100)
     }
 
+    const onRemove = () => {
+        console.log('delete and redirect to home')
+    }
+
     let timer = current-start
+    if(!start && laps) {
+        timer = 0
+    }
+
     return (
         <div>
             <Timer interval={laps.reduce((total, curr) => total + curr, 0) + timer}/>
