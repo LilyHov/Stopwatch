@@ -17,7 +17,7 @@ const ListItem = ({paused, maxValue, minValue, action, time, label, key }) => {
     }
 
     return (
-        <div className={classNames} onClick={action} key={key}>
+        <div className={classNames} onClick={action} >
             <span>{label && (label)} </span>
             <span className={timeClasses}> {time} {paused && (' zzzz')}</span>
         </div>

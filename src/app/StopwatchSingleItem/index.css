@@ -1,0 +1,22 @@
+.main-timer {
+    font-size: 5rem;
+    color: #dddddd;
+    height: 35vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.list-timer {
+    text-align: end;
+}
+
+.active-button {
+    width: 33.3%;
+    float: left;
+}
+
+.control-buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+}

@@ -6,15 +6,15 @@ import Timer from "./timer";
 const LapList = ({laps}) => {
     const finishedLaps = laps.slice(1)
 
-    const max = Math.max(...finishedLaps)
-    const min = Math.min(...finishedLaps)
+   const max = Math.max(...finishedLaps)
+   const min = Math.min(...finishedLaps)
 
     return(<div>
             {finishedLaps.map((lap, index) => (
                 <ListItem
                     label={`Lap ${index+1}`}
-                    key={laps.length - index}
-                    time={<Timer time={lap}/> }
+                    key={index}
+                    time={<Timer time={lap} classNames="list-timer"/> }
                     maxValue={lap === max}
                     minValue={lap === min}
                 />

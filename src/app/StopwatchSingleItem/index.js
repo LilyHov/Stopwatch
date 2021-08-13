@@ -2,9 +2,9 @@ import React, { useState } from "react";
 
 import Timer from "./timer";
 import ControlButtons from "./ControlButtons";
-import ListItem from "../common/ListItem";
 import ActionButton from "../common/ActionButton";
 import LapList from "./lapList";
+import './index.css'
 
 function StopWatch() {
     const [isActive, setIsActive] = useState(false);
@@ -54,7 +54,7 @@ function StopWatch() {
 
     return (
         <div className="stop-watch">
-            <Timer time={time-start} />
+            <Timer time={time-start} classNames="main-timer"/>
             <ControlButtons
                 active={isActive}
                 isPaused={isPaused}

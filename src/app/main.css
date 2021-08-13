@@ -1,3 +1,6 @@
 body {
-    background-color: #000000;
+    background-color: black;
+}
+.stop-watch {
+    margin: 20px;
 }
