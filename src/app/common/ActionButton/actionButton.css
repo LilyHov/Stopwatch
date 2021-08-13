@@ -15,7 +15,7 @@
     font-size: 1rem;
 }
 .paused-btn {
-    background-color: red;
+    background-color: darkred;
 }
 
 .paused-btn:before {
