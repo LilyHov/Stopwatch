@@ -4,7 +4,7 @@ import ActionButton from "../common/ActionButton";
 export default function ControlButtons(props) {
     const StartButton = (
         <>
-            <ActionButton text="Start" action={props.handleStart} active/>
+            <ActionButton text="Start" action={props.handleStart} active single/>
         </>
     );
     const ActiveButtons = (
@@ -21,8 +21,8 @@ export default function ControlButtons(props) {
     );
 
     return (
-        <div className="control-buttons">
+        <>
             {props.active ? ActiveButtons : StartButton}
-        </div>
+        </>
     );
 }

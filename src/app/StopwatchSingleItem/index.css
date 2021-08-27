@@ -14,9 +14,3 @@
     width: 33.3%;
     float: left;
 }
-
-.control-buttons {
-    display: grid;
-    grid-template-columns: auto auto auto;
-    justify-items: center;
-}

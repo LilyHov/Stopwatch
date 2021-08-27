@@ -43,3 +43,9 @@
     filter: brightness(0.85);
 }
 
+.control-buttons {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-items: center;
+    justify-content: center;
+}

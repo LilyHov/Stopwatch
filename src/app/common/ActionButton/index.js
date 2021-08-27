@@ -1,7 +1,7 @@
 import * as React from 'react'
 import  './actionButton.css'
 
-const ActionButton = ({paused, text, action, active, className}) => {
+const ActionButton = ({paused, text, action, active, className, single}) => {
     let classNames = "button "
 
     if(paused){
@@ -16,7 +16,7 @@ const ActionButton = ({paused, text, action, active, className}) => {
         classNames += className
     }
 
-    return <button className={classNames} onClick={action}>{text}</button>
+    return <div className="control-buttons"> <button className={classNames} onClick={action}>{text}</button> </div>
 
 }
 export default ActionButton

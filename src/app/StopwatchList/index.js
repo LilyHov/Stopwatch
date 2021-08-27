@@ -20,12 +20,12 @@ export const StopwatchList= (props) => {
 
     return (
      <>
-         <ActionButton text="New" action={onNewButtonClick}/>
+         <ActionButton text="New" action={onNewButtonClick} single/>
          {items.map((item, index) => (
              <div key={index} ><ListItem time={<TimerFormat time={11441}/>} action={onItemClick}/></div>
              ))
          }
-         <ActionButton text="More" action={onMoreButtonClick}/>
+         <ActionButton text="More" action={onMoreButtonClick} single/>
      </>
     )
 }

@@ -46,6 +46,10 @@ function StopWatch() {
         setLaps([0])
     };
     const handleRemove = () => {
+        setIsActive(false);
+        setStart(0)
+        setTime(0);
+        setLaps([0])
         console.log('delete and redirect to home')
     }
     const handleLapCreation = () => {
@@ -64,7 +68,7 @@ function StopWatch() {
                 handleLapCreation={handleLapCreation}
             />
             <LapList laps={laps.map((lap, index)=> lap-laps[index-1] || 0 )} />
-            <ActionButton text='Remove' action={handleRemove}/>
+           <div className="single-line-btn"> <ActionButton text='Remove' action={handleRemove}/></div>
         </div>
     );
 }
