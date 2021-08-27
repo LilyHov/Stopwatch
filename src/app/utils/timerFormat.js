@@ -1,6 +1,6 @@
 import React from "react";
 
-export default function Timer({time,classNames}) {
+export default function TimerFormat({time,classNames}) {
     const className = `timer ${classNames}`
 
     return (

@@ -1,9 +1,10 @@
 import * as React from 'react';
 import './list.css'
 
-const ListItem = ({paused, maxValue, minValue, action, time, label, key }) => {
-    let classNames = 'list-item-wrapp';
-    let timeClasses;
+const ListItem = ({paused, maxValue, minValue, action, time, label }) => {
+    let classNames = 'list-item-wrap';
+    let timeClasses = '';
+
     if (paused) {
         classNames += ' paused';
     }
@@ -18,7 +19,7 @@ const ListItem = ({paused, maxValue, minValue, action, time, label, key }) => {
 
     return (
         <div className={classNames} onClick={action} >
-            <span>{label && (label)} </span>
+            {label && <span>{label && (label)} </span>}
             <span className={timeClasses}> {time} {paused && (' zzzz')}</span>
         </div>
     )

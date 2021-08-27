@@ -2,12 +2,13 @@ import * as React from 'react';
 import {UniversalRouter} from "../universal-router";
 import ActionButton from "../common/ActionButton";
 import ListItem from "../common/ListItem";
+import TimerFormat from "../utils/timerFormat";
 
 const items = ['aaaa','bbbb','nnnn']
 export const StopwatchList= (props) => {
 
     const onMoreButtonClick = () => {
-        console.log('item clicked moreee')
+        // console.log('item clicked moreee')
     }
 
     const onNewButtonClick = () => {
@@ -20,8 +21,8 @@ export const StopwatchList= (props) => {
     return (
      <>
          <ActionButton text="New" action={onNewButtonClick}/>
-         {items.map((item) => (
-             <ListItem label={item} time={111} key={item} action={onItemClick}/>
+         {items.map((item, index) => (
+             <div key={index} ><ListItem time={<TimerFormat time={11441}/>} action={onItemClick}/></div>
              ))
          }
          <ActionButton text="More" action={onMoreButtonClick}/>

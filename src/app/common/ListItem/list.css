@@ -1,9 +1,9 @@
-.list-item-wrapp {
+.list-item-wrap {
     border-bottom: 0.1rem solid #838383;
     color: white;
     display: grid;
     grid-template-columns: auto auto;
-    padding: 20px;
+    padding: 10px;
     cursor: pointer;
 }
 

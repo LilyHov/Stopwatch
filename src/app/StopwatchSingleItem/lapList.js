@@ -1,7 +1,7 @@
 import React, {useMemo} from "react";
 
 import ListItem from "../common/ListItem";
-import Timer from "./timer";
+import TimerFormat from "../utils/timerFormat";
 
 const LapList = ({laps}) => {
     const finishedLaps = laps.slice(1)
@@ -9,17 +9,18 @@ const LapList = ({laps}) => {
    const max = Math.max(...finishedLaps)
    const min = Math.min(...finishedLaps)
 
-    return(<div>
+    return(<>
             {finishedLaps.map((lap, index) => (
+                <div key={index-1}>
                 <ListItem
                     label={`Lap ${index+1}`}
-                    key={index}
-                    time={<Timer time={lap} classNames="list-timer"/> }
+                    time={<TimerFormat time={lap} classNames="list-timer"/> }
                     maxValue={lap === max}
                     minValue={lap === min}
                 />
+                </div>
             ))}
-        </div>
+        </>
     )
 }
 

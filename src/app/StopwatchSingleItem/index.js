@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-import Timer from "./timer";
+import TimerFormat from "../utils/timerFormat";
 import ControlButtons from "./ControlButtons";
 import ActionButton from "../common/ActionButton";
 import LapList from "./lapList";
@@ -54,7 +54,7 @@ function StopWatch() {
 
     return (
         <div className="stop-watch">
-            <Timer time={time-start} classNames="main-timer"/>
+            <TimerFormat time={time-start} classNames="main-timer"/>
             <ControlButtons
                 active={isActive}
                 isPaused={isPaused}
